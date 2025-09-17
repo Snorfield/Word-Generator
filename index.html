@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Probabilistic Word Generation</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+    </style>
+</head>
+
+<body>
+    <div id="titleContainer">
+        <h1 id="title">Probabilistic Word Generation</h1>
+        <p1 class="paragraph">
+            This is a character-level variable-order Markov model trained on thousands of english words.
+            For each, it parsed patterns, and now it can repeat those patterns to randomly create words.
+        </p1>
+    </div>
+    <div id="container">
+        <input id="input" type="text" maxlength="36" placeholder="..." autocomplete="off">
+        <h3 class="text">Length:</h3>
+        <input type="number" id="length" class="numberInput" name="length" min="1" max="10" value="3">
+        <h3 class="text">Context:</h3>
+        <input type="number" id="context" class="numberInput" name="context" min="1" max="10" value="2">
+    </div>
+    <div id="buttonContainer">
+        <button type="button" class="button" id="button">Generate</button>
+    </div>
+    <div id="output"></div>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
